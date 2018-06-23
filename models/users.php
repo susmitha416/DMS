@@ -90,6 +90,7 @@ class Users
 	function displayTable()
   {
 		$sql = "select u.id as id,u.name as name,d.deviceName as dname FROM users u,devices d where u.id = d.updatedBy";
+    
 		$data = $this->runQuery($sql);
 		return $data;
 	}

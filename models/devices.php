@@ -79,7 +79,7 @@ class Devices
 	function tableData($startfrom,$recpage)
     {
       $userid =  $_SESSION['userid'];
-      $sql = "select d.id as id,d.name as dname,u.name as uname,u.email as email from users u ,devices d WHERE u.id = d.updatedBy AND d.isActive = 1 AND role='user' LIMIT $startfrom, $recpage";
+      $sql = "select d.id as id,d.deviceName as dname,u.name as uname,u.email as email from users u ,devices d WHERE u.id = d.updatedBy AND d.isActive = 1 AND role='user' LIMIT $startfrom, $recpage";
      
        $rows = $this->runQuery($sql);
 
@@ -88,7 +88,7 @@ class Devices
 
 
 
-	/*@desc selecting devices records to display on the dashboard
+	/*@desc selecting devices records to display on the userdashboard
 	  @return string data
 	*/
 
